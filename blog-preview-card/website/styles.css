@@ -1,0 +1,97 @@
+/*importing fonts*/
+@font-face {
+    font-family: 'Figtree';
+    src: url('fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url('fonts/static/Figtree-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+/*setting up the root variables*/
+:root{
+    --clr-Yellow: hsl(47, 88%, 63%);
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Gray-500: hsl(0, 0%, 42%);
+    --clr-Gray-950: hsl(0, 0%, 7%);
+
+    --fw-bold:800;
+    --fw-semi-bold:500;
+
+    --ff-main: 'Figtree', sans-serif;
+}
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+img{
+    display: block;
+    width: 100%;
+}
+/*genaral styles*/
+body{
+    font-family: var(--ff-main);
+    background-color: var(--clr-Yellow);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    margin: 1rem;
+    overflow:hidden;
+}
+section{
+    background-color: var(--clr-White);
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.4rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+h1{
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-Gray-950);
+    background-color: var(--clr-Yellow);
+    padding: 0.5rem 1rem;
+    max-width: fit-content;
+    border-radius: 0.5rem;
+}
+.date{
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-Gray-950);
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-Gray-950);
+}
+img{
+    border-radius: 0.5rem;
+}
+.destcription{
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-Gray-500);
+    line-height: 1.5rem;
+}
+.pfp{
+    font-family: var(--ff-main);
+    color-scheme: var(--clr-Gray-950);
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+.pfp>img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
