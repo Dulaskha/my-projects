@@ -1,0 +1,148 @@
+:root{
+    --clr-bg-200: hsl(257, 40%, 49%);
+    --clr-bg-100: hsl(255, 100%, 100%);
+
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 600;
+}
+
+
+
+/*css reset*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img,svg{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*general styling*/
+body{
+    padding-top: 2rem;
+    margin-inline: 4rem;
+    height: 100%;
+    background-color: var(--clr-bg-200);
+    background-image: url('images/bg-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+   
+}
+
+
+.main-content{
+    display: flex;
+    gap: 5rem;
+    margin-top: 10rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    flex: 1;
+}
+button{
+    padding: 0.8rem 3rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: white;
+    font-size: 1rem;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 1);
+    cursor: pointer;
+    align-self: flex-start;
+}
+.logo{
+    width: 20%;
+    height: auto;
+}
+h1{
+    font-size: 2.5rem;
+    color: white;
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-bold);
+    max-width: 500px;
+}
+p{
+    font-size: 1rem;
+    color: white;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    max-width: 500px;
+    margin-top: -0.8rem;
+}
+.main-content>img{
+    flex: 1;
+    
+    height: auto;
+    flex-shrink: 1;
+    min-width:0; 
+    
+}
+
+.logo {
+    width: 200px;
+    height: auto; 
+    flex-shrink: 0; 
+}
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10%;
+}
+
+footer a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+footer a:hover {
+    color: hsl(255, 100%, 100%);
+}
+
+/*media queries*/
+@media screen and (max-width: 768px){
+    .main-content{
+        flex-direction: column;
+        margin-top: 5rem;
+        gap: 2rem;
+    }
+    h1,p{
+        text-align: center;
+    }
+    button{
+        align-self: center;
+    }
+    .main-content>img{
+        max-width: 400px;
+    }
+    footer{
+        justify-content: center;
+    }
+   
+
+}
+
+
