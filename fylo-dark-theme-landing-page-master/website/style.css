@@ -1,0 +1,510 @@
+:root {
+
+    --clr-mainbg: hsl(218, 28%, 13%);
+    --clr-footerbg: hsl(216, 53%, 9%);
+    --clr-testimonialsbg: hsl(219, 30%, 18%);
+    --clr-signupbg: hsl(217, 28%, 15%);
+    --clr-bttn-200: hsl(198, 60%, 50%);
+    --clr-bttn-100: hsl(176, 68%, 64%);
+    --clr-error: hsl(0, 100%, 63%);
+    --clr-text: hsl(0, 0%, 100%);
+
+    --ff-main: 'Raleway', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+
+    --fw-bold: 700;
+    --fw-regular: 400;
+
+
+}
+
+/*css reset*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-mainbg);
+
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    
+}
+main{
+    margin-inline: 1rem;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*general styles*/
+
+/*header section*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    
+}
+nav ul{
+    display: flex;
+    gap: 1rem;
+    
+}
+nav ul li{
+    list-style: none;
+    font-family: var(--ff-main);
+    font-weight: var(--fw-regular);
+    color: var(--clr-text);
+    font-size: 0.9rem;
+}
+.logo{
+    max-width: 6rem;
+    flex: 1;
+}
+header{
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    
+}
+.header-text{
+    text-align: center;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 470px;
+}
+h1{
+    font-family: var(--ff-main);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text);
+}
+p{
+    font-family: var(--ff-secondary);
+    line-height: 1.5;
+    font-weight: var(--fw-regular);
+    color: var(--clr-text);
+    font-size: 0.9rem;
+}
+.header-text button{
+    justify-self: center;
+    padding: 1rem 5rem;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text);
+    font-size: 0.9rem;
+    background: linear-gradient(to right, var(--clr-bttn-100), var(--clr-bttn-200));
+    border: none;
+    border-radius: 2rem;
+}
+
+/*feature section*/
+
+.features{
+    display: grid;
+    place-content: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+.feature{
+    display: grid;
+    gap: 2rem;
+    max-width: 350px;
+    
+}
+.feature img{
+    /* width: 4rem; */
+    justify-self: center;
+}
+.feature-text{
+    text-align: center;
+    display: grid;
+    gap: 0.5rem;
+}
+.feature-text h2{
+    font-family: var(--ff-main);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text);
+}
+
+/*section2 section*/
+
+.section2{
+    display: grid;
+    gap: 3rem;
+    padding: 2rem;
+    place-content: center;
+    
+}
+.section2-text{
+    text-align: left;
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+}
+.section2-text h2{
+    font-family: var(--ff-main);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text);
+}
+.section2-text a{
+    font-family: var(--ff-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-bttn-100);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    
+    
+    
+    
+}
+.section2-text a::after{
+    content: url(images/icon-arrow.svg);
+    width: 1rem;
+    height: 1rem;
+    
+
+    
+}
+
+.testimonials{
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    place-content: center;
+    
+    
+}
+.testimonial{
+    position: relative;
+}
+.quote_img{
+    width: 2.5rem;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+   
+}
+.testimonial{
+    background-color: var(--clr-testimonialsbg);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 1.5rem;
+    text-align: left;
+    max-width: 400px;
+
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.user h3{
+    font-family: var(--ff-main);
+    color: var(--clr-text);
+    font-size: 0.9rem;
+
+
+}
+.user p{
+    font-size: 0.8rem;
+}
+
+/*signup section*/
+
+
+
+.signup{
+    
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    place-content: center;
+    background-color: var(--clr-signupbg);
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative;
+    top: 10rem;
+    max-width: 800px;
+    
+    justify-self: center;
+
+}
+.signup h2{
+    font-family: var(--ff-main);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text);
+}
+.signup p{
+    font-size: 1rem;
+}
+form{
+    display: grid;
+    gap: 1rem;
+}
+input, button{
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--clr-text);
+    color: black;
+    font-family: var(--ff-secondary);
+    font-size: 0.875rem;
+    font-weight: var(--fw-regular);
+}
+button{
+    background: linear-gradient(to right, var(--clr-bttn-100), var(--clr-bttn-200));
+    color: var(--clr-text);
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+}
+
+/*footer section*/
+footer{
+    background-color: var(--clr-footerbg);
+    padding: 2rem;
+    
+    padding-top: 15rem;
+    display: grid;
+    gap: 2rem;
+    
+}
+.footer_wrapper{
+    
+    
+    text-align: center;
+    
+    display: grid;
+    gap: 2rem;
+    text-align: left;
+    line-height: 2;
+    max-width: 100%;
+}
+
+.footer1{
+    display: grid;
+    gap: 2rem;
+}
+.footer1 p{
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--clr-text);
+    max-width: 400px;
+}
+
+.flinks li{
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--clr-text);
+    
+}
+.footer2{
+    display: grid;
+    gap:3rem;
+}
+.footer2 ul li{
+    font-size: 1.2rem;
+}
+.address,.email,.number{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.footer2-links{
+    display: grid;
+    gap: 0.8rem;
+}
+.address::before{
+    content: url(images/icon-location.svg);
+    width: 1rem;
+    height: 1rem;
+}
+.number::before{
+    content: url(images/icon-phone.svg);
+    width: 1rem;
+    height: 1rem;
+}
+.email::before{
+    content: url(images/icon-email.svg);
+    width: 1rem;
+    height: 1.2rem;
+}
+
+.social-icons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.social-icons .fa{
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    
+
+}
+.social-icons .fa:hover{
+    background-color: var(--clr-text);
+    color: var(--clr-footerbg);
+}
+.footer2 ul li{
+    white-space: nowrap;
+}
+
+/*fixing firefox misalignment issue*/
+
+.signup {
+    margin: 4rem auto 0 auto; /* Centering it in both browsers */
+    position: relative; /* Ensure it respects normal flow */
+    left: 0;
+    right: 0;
+}
+.signup_section {
+    display: grid;
+    place-items: center;
+}
+
+/*media queries*/
+
+
+
+@media screen and (min-width:728px){
+    .features{
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto);  
+        place-items: center;
+        margin: 5rem;
+        
+    }
+    .section2{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    .section2-text{
+        gap: 1rem;
+    }
+    .testimonials{
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 6rem;
+       
+    }
+    .footer_wrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer1{
+        display: flex;
+    }
+    .footer2{
+        display: flex;
+        margin-top: 6rem;
+        
+    }
+    .footer1-links{
+        margin-top: 6rem;
+    }
+    
+    
+}
+@media screen and (max-width:1000px) {
+    .footer1 {
+        margin-top: 5rem;
+        display: grid;
+        gap: 0rem; /* Adjust the gap between footer1 sections */
+    }
+    .footer1 p{
+        margin: 0;
+        padding: 0;
+    }
+    .footer1-links{
+        margin: 0;
+        padding: 0;
+    }
+}
+    
+
+
