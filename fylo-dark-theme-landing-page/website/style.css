@@ -119,7 +119,17 @@ nav ul li{
     font-weight: var(--fw-regular);
     color: var(--clr-text);
     font-size: 0.9rem;
+    cursor:pointer;
 }
+nav ul li:hover{
+    
+    text-decoration:underline;
+    font-weight: var(--fw-bold);
+    
+    
+}
+
+
 .logo{
     max-width: 6rem;
     flex: 1;
@@ -296,7 +306,7 @@ p{
     border-radius: 0.5rem;
     text-align: center;
     position: relative;
-    top: 10rem;
+    top: 6rem;
     max-width: 800px;
     
     justify-self: center;
@@ -330,8 +340,11 @@ button{
     font-family: var(--ff-secondary);
     font-weight: var(--fw-bold);
     font-size: 1rem;
+    cursor:pointer;
 }
-
+button:hover{
+	background:var(--clr-bttn-100);
+}
 /*footer section*/
 footer{
     background-color: var(--clr-footerbg);
@@ -418,7 +431,7 @@ footer{
     transition: color 0.3s ease;
     border: 2px solid white;
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
