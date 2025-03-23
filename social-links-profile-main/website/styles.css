@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Inter';
+  src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+
+}
+
+:root {
+  --clr-grey-900: hsl(0, 0%, 8%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-100: hsl(0, 0%, 100%);
+  --clr-green: hsl(75, 94%, 57%);
+
+
+
+  --ff-main: 'Inter', sans-serif;
+
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-regular: 400;
+
+}
+
+/*css reset*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* general styles */
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-grey-900);
+  font-family: var(--ff-main);
+  height: 100vh;
+}
+
+main{
+  margin-inline: 1rem;
+}
+.wrapper{
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  border-radius: 1rem;
+  background-color: var(--clr-grey-800);
+  padding: 2rem;
+  max-width: 600px;
+}
+.name{
+  font-size: 1.5rem;
+  color: var(--clr-grey-100);
+  font-weight: var(--fw-bold);
+}
+.location{
+  font-size: 1rem;
+  color: var(--clr-green);
+  font-weight: var(--fw-bold);
+}
+.description{
+  font-size: 1rem;
+  color: var(--clr-grey-100);
+  font-weight: var(--fw-regular);
+}
+a{
+  font-size: 1rem;
+  color: var(--clr-grey-100);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  background-color: var(--clr-grey-700);
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.6rem 3rem;
+  
+
+}
+img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.wrapper_links{
+  display: grid;
+  gap: 0.6rem;
+}
+

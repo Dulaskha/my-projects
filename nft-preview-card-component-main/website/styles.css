@@ -1,0 +1,195 @@
+:root {
+   --clr-blue-100: hsl(215, 51%, 70%);
+   --clr-blue-200: hsl(178, 100%, 50%);
+   --clr-mainBG: hsl(217, 54%, 11%);
+   --clr-cardBG: hsl(216, 50%, 16%);
+   --clr-line: hsl(215, 32%, 27%);
+   --clr-white: hsl(0, 0%, 100%);
+
+
+   --ff-main: 'Outfit', sans-serif;
+
+   --fw-bold: 600;
+   --fw-semibold: 400;
+   --fw-regular: 300;
+
+}
+
+/*css reset*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+   margin: 0;
+}
+
+body {
+   /* 3. Add accessible line-height */
+   line-height: 1.5;
+   /* 4. Improve text rendering */
+   -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+   text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+   isolation: isolate;
+}
+
+/* general styles */
+body {
+   background-color: var(--clr-mainBG);
+   display: grid;
+   place-content: center;
+   height: 100vh;
+}
+
+main {
+   margin-inline: 1rem;
+}
+
+.wrapper {
+   display: grid;
+   gap: 1rem;
+   padding: 2rem;
+   border-radius: 1rem;
+   background-color: var(--clr-cardBG);
+   max-width: 400px;
+
+}
+
+h1 {
+   font-family: var(--ff-main);
+   font-weight: var(--fw-bold);
+   color: var(--clr-white);
+}
+
+.wrapper p {
+   font-family: var(--ff-main);
+   font-weight: var(--fw-regular);
+   color: var(--clr-blue-100);
+   font-size: 1rem;
+}
+
+.flex-item {
+   display: flex;
+   justify-content: space-between;
+}
+
+.number {
+   font-family: var(--ff-main) !important;
+   font-weight: var(--fw-bold) !important;
+   color: var(--clr-blue-200) !important;
+   font-size: 1rem;
+   display: flex;
+   gap: 0.5rem;
+   align-items: center;
+}
+
+.number::before {
+   content: url(images/icon-ethereum.svg);
+   width: 11px;
+   height: 18px;
+
+}
+
+.date {
+   font-family: var(--ff-main);
+   font-weight: var(--fw-semibold) !important;
+   color: var(--clr-blue-100);
+   font-size: 1rem;
+   display: flex;
+   gap: 0.5rem;
+   align-items: center;
+}
+
+.date::before {
+   content: url(images/icon-clock.svg);
+   width: 17px;
+   height: 17px;
+
+}
+
+hr {
+   color: var(--clr-line);
+}
+
+.creator {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.creator img {
+   border: 1px solid var(--clr-white);
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+}
+
+.creator p {
+   font-family: var(--ff-main);
+   font-size: 1rem;
+   font-weight: var(--fw-semibold);
+   color: var(--clr-white);
+}
+
+.creator span {
+   color: var(--clr-blue-100);
+}
+
+.content {
+   display: grid;
+   gap: 1rem;
+}
