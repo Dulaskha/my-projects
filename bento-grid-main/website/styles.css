@@ -45,6 +45,7 @@ body {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     background-color: aliceblue;
+    min-height:100vh;
     display: grid;
     place-items: center;
     margin-inline: 1rem;
@@ -244,7 +245,7 @@ h6 {
             "grid1 grid6"
             "grid8 grid8";
         grid-template-columns: repeat(2, 1fr);
-        padding-bottom: 1rem;
+       
     }
 
     .card-section {
