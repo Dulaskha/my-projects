@@ -343,10 +343,7 @@ h6 {
 
 /* Desktop Responsive Styles */
 @media (min-width: 990px) {
-    body {
-
-        height: 100vh;
-    }
+    
 
     .card-section {
         grid-template-areas:
