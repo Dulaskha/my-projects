@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_left">
+                <img src="images/icon-menu.svg" alt="" class="menu">
+                <img src="images/logo.svg" alt="" class="nav_logo">
+                <div class="nav_left_links">
+                    <ul>
+                        <li><a href="">Collections</a></li>
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="nav_right">
+                <img src="images/icon-cart.svg" alt="">
+                <img src="images/image-avatar.png" alt="" class="nav_avatar">
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="main_left">
+            <div class="product-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="images/image-product-1.jpg" alt="Product image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/image-product-2.jpg" alt="Product image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/image-product-3.jpg" alt="Product image 3">
+                    </div>
+                    <div class="slide">
+                        <img src="images/image-product-4.jpg" alt="Product image 4">
+                    </div>
+                </div>
+                <button class="slider-prev-btn">
+                    <span class="arrow">&#10094;</span>
+                </button>
+                <button class="slider-next-btn">
+                    <span class="arrow">&#10095;</span>
+                </button>
+            </div>
+            <div class="thumbnails">
+                <div class="thumbnail active" data-index="0">
+                    <img src="images/image-product-1.jpg" alt="Thumbnail 1">
+                </div>
+                <div class="thumbnail" data-index="1">
+                    <img src="images/image-product-2.jpg" alt="Thumbnail 2">
+                </div>
+                <div class="thumbnail" data-index="2">
+                    <img src="images/image-product-3.jpg" alt="Thumbnail 3">
+                </div>
+                <div class="thumbnail" data-index="3">
+                    <img src="images/image-product-4.jpg" alt="Thumbnail 4">
+                </div>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="main_right_header">
+                <h1>SNEAKER COMPANY</h1>
+                <h2>Fall Limited Edition Sneakers</h2>
+            </div>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            <div class="price">
+                <div class="new_price">
+                    <span class="orginal_price">$125.00</span>
+                    <span class="discount">50%</span>
+                </div>
+                <span class="old_price">$250.00</span>
+            </div>
+            <div class="cart">
+                <div class="number-input">
+                    <p class="decrement">-</p>
+                    <p class="count">0</p>
+                    <p class="increment">+</p>
+                </div>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
