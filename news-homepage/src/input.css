@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import './mobileMenu.css';
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-ExtraBold.ttf');
+    font-weight: 800;
+}@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Bold.ttf');
+    font-weight: 700;
+}@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Regular.ttf');
+    font-weight: 400;
+}
+
+@theme{
+    --color-primary-orange:hsl(35, 77.30%, 62.00%);
+    --color-primary-red:hsl(5, 85%, 63%);
+
+    --color-neutral-white-100:hsl(36, 100.00%, 99.00%);
+    --color-neutral-white-200:hsl(233, 8%, 79%);
+    --color-neutral-white-300:hsl(236, 13%, 42%);
+    --color-neutral-white-900:hsl(240, 100%, 5%);
+
+    --font-main:'Inter',sans-serif;
+    
+
+    --font-weight-bold:800;
+    --font-weight-semibold:700;
+    --font-weight-normal:400;
+
+    
+}
+
+@layer utilities{
+    .imgGrid{
+        grid-template-columns: auto 1fr;
+    }
+    
+}
