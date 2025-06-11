@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ishuu 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .greeting {
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .question {
+            font-size: 1.8em;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        .btn {
+            padding: 20px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: scale(1);
+            min-width: 120px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-no {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .full-screen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 1000 !important;
+            border-radius: 0 !important;
+            font-size: 2em !important;
+            min-width: auto !important;
+            min-height: auto !important;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: scale(0);
+            pointer-events: none;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 480px) {
+            .greeting {
+                font-size: 2em;
+            }
+            
+            .question {
+                font-size: 1.5em;
+            }
+            
+            .btn {
+                min-width: 100px;
+                min-height: 70px;
+                font-size: 1em;
+                padding: 15px 20px;
+            }
+            
+            .buttons-container {
+                gap: 15px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="greeting">Hi Ishuu 💕</h1>
+        <p class="question">Do you kiss me? 😘</p>
+        <div class="buttons-container">
+            <button class="btn btn-no" id="noBtn">No 😠</button>
+            <button class="btn btn-yes" id="yesBtn">Yes 😘</button>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        let noClickCount = 0;
+
+        noBtn.addEventListener('click', function() {
+            noClickCount++;
+            
+            // Scale down no button and scale up yes button
+            const noScale = Math.max(0.3, 1 - (noClickCount * 0.3));
+            const yesScale = 1 + (noClickCount * 0.3);
+            
+            noBtn.style.transform = `scale(${noScale})`;
+            yesBtn.style.transform = `scale(${yesScale})`;
+            
+            // Add shake effect to no button
+            noBtn.style.animation = 'none';
+            setTimeout(() => {
+                noBtn.style.animation = 'shake 0.5s ease-in-out';
+            }, 10);
+            
+            // After 3 clicks, hide no button and make yes button full screen
+            if (noClickCount >= 3) {
+                noBtn.classList.add('hidden');
+                yesBtn.classList.add('full-screen');
+                yesBtn.classList.add('pulse');
+                yesBtn.innerHTML = 'Kiss me! 💋😘';
+            }
+        });
+
+        yesBtn.addEventListener('click', function() {
+            // Create WhatsApp message
+            const phoneNumber = '94776982312'; // Your number without +
+            const message = 'ummi ummi 😍😘';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Add shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0) scale(var(--current-scale, 1)); }
+                25% { transform: translateX(-10px) scale(var(--current-scale, 1)); }
+                75% { transform: translateX(10px) scale(var(--current-scale, 1)); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
